@@ -30,3 +30,48 @@
 .container {width:450px}
  
 }
+.header-top{
+    background:#111;
+    padding:8px 0;
+    color:#fff;
+    font-size:14px;
+}
+
+.header-info-left ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.header-info-left a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.header-social{
+    display:flex;
+    gap:15px;
+    list-style:none;
+}
+
+.header-social a{
+    color:#fff;
+    font-size:16px;
+}
+
+/* MOBILE FIX */
+@media (max-width:768px){
+
+.header-info-left ul{
+    flex-direction:column;
+    align-items:center;
+}
+
+.header-social{
+    justify-content:center;
+    margin-top:5px;
+}
+
+}
