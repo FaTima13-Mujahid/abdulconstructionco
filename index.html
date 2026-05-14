@@ -21,28 +21,28 @@
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
             <style>
-                .whatsapp-btn{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
+.whatsapp-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
     font-size:35px;
     z-index:9999;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    transition:0.3s;
     text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity .4s ease;
 }
 
-.whatsapp-btn:hover{
-    transform:scale(1.1);
-    color:white;
+.whatsapp-btn.hide{
+    opacity:0;
+    pointer-events:none;
 }
             </style>
    </head>
@@ -603,6 +603,16 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-        
+  <script>
+window.addEventListener("scroll", function () {
+    let whatsapp = document.querySelector(".whatsapp-btn");
+
+    if (window.scrollY > 100) {
+        whatsapp.classList.add("hide");
+    } else {
+        whatsapp.classList.remove("hide");
+    }
+});
+</script> 
     </body>
 </html>
